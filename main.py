@@ -7,6 +7,8 @@ from langchain.memory import ConversationBufferMemory
 from yaml.loader import SafeLoader
 from dotenv import load_dotenv
 
+from utils import get_chat_response
+
 
 with open('./config.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
