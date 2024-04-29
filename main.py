@@ -33,9 +33,10 @@ if st.session_state["authentication_status"]:
         st.write(f'欢迎 *{st.session_state["name"]}*')
   
     st.title("💬 克隆ChatGPT")
-    with st.sidebar:
-        openai_api_key = st.text_input("请输入OpenAI API Key：", type="password")
-        st.markdown("[获取OpenAI API key](https://platform.openai.com/account/api-keys)")
+    # with st.sidebar:
+    #     # openai_api_key = st.text_input("请输入OpenAI API Key：", type="password")
+    #     st.markdown("[获取OpenAI API key](https://platform.openai.com/account/api-keys)")
+    openai_api_key = os.environ.get("OPENAI_API_KEY")
     
     if "memory" not in st.session_state:
         st.session_state["memory"] = ConversationBufferMemory(return_memory=True)
