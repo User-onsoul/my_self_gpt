@@ -7,7 +7,6 @@ from langchain.memory import ConversationBufferMemory
 from yaml.loader import SafeLoader
 from dotenv import load_dotenv
 
-from utils import generator_picture
 
 with open('./config.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
